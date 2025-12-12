@@ -74,11 +74,16 @@ WSGI_APPLICATION = "todoManager.wsgi.application"
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'todolist',           # database name
+        'USER': 'root',                # your mysql username
+        'PASSWORD': 'ahmed123',   # your mysql password
+        'HOST': 'localhost',           # or server IP
+        'PORT': '3306',                # default MySQL port
     }
 }
+
 
 
 # Password validation
